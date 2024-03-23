@@ -211,15 +211,5 @@ public class CfgEpsUnitElim {
 
 	}
 
-//	public static void main(String[] args) {
-//		// CfgEpsUnitElim cfgEpsUnitElim = new CfgEpsUnitElim(
-//		// "S;V;Z;R;W#m;n;w#S/RnV,m;V/S,V,Z,e,n,nRmWS,nVmRR;Z/S,WwZ,ZRR,e,nSnV;R/R,SRwVZ,SW,Zw,e;W/ZVR,mWn");
-//		// CfgEpsUnitElim cfgEpsUnitElim = new
-//		// CfgEpsUnitElim("S;A;B;C#a;b;c;d;x#S/aAb,xB;A/Bc,C,c,d;B/CACA,e;C/A,b,e");
-//		// cfgEpsUnitElim.toString();
-//		CfgEpsUnitElim cfgEpsUnitElim = new CfgEpsUnitElim(
-//				"S;D;G;B;T;A#q;u;w#S/BGTBT,D,DuSA,G,GBw,TuTq;D/A,Au,S,uST,wDwDq;G/TG,uTSG,wS;B/DGS,G,T;T/B,BuT,D,G,qD,uB;A/BT,uT,wT");
-//
-//	}
 
 }
