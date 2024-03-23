@@ -495,9 +495,5 @@ public class NfaToDfa {
 		return output;
 	}
 
-//	public static void main(String[] args) {
-//		NfaToDfa nfaToDfa= new NfaToDfa("0;1;2;3;4;5;6;7;8;9#i;s;y#0,i,1;1,e,5;2,e,3;3,e,5;4,e,0;4,e,2;5,y,6;6,s,7;7,e,4;7,e,9;8,e,4;8,e,9#8#9");
-//		
-//	}
-	
+
 }
