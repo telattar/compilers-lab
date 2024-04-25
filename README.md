@@ -47,13 +47,13 @@ Takes a regular expression as an input string. This code's instance variables in
     - Takes a formatted string representation of the NFA as input and performs the conversion.
 
 - **Methods:**
-  - epsilonClosure(ArrayList<Transition> t): Computes the epsilon closure for each state in the NFA. It returns a TreeMap where each key represents a state, and the corresponding value is an ArrayList containing all states reachable from the key state through epsilon transitions.
-  - epsilonClosureMerged(TreeMap<Integer, ArrayList<Integer>> input): Merges the epsilon closures of states that share common epsilon transitions. It iteratively merges states until no more merges can be made.
-  - getTransitionsDFA(TreeMap<Integer, ArrayList<Integer>> epsilonClosure, ArrayList<Transition> transits, int start): Generates the transitions for the equivalent DFA based on the epsilon closures and transitions of the NFA. It constructs the DFA transitions using the epsilon closures and transitions of the NFA, starting from the specified start state.
-  - sortArray(ArrayList<ArrayList<Integer>> array): Sorts an ArrayList of ArrayLists of integers lexicographically.
-  - sortDFA(): Sorts the DFA transitions lexicographically based on the start state, transition symbol, and final state.
-  - NfaToDfa(String input): Constructor method that initializes the NFA to DFA converter. It takes a formatted string representation of the NFA as input and performs the conversion.
-  - toString(): Overrides the toString() method to generate a formatted string representation of the DFA. The string representation follows the format specified in the task description and includes states, transitions, starting states, and accept states.
+  - `epsilonClosure(ArrayList<Transition> t)`: Computes the epsilon closure for each state in the NFA. It returns a TreeMap where each key represents a state, and the corresponding value is an ArrayList containing all states reachable from the key state through epsilon transitions.
+  - `epsilonClosureMerged(TreeMap<Integer, ArrayList<Integer>> input)`: Merges the epsilon closures of states that share common epsilon transitions. It iteratively merges states until no more merges can be made.
+  - `getTransitionsDFA(TreeMap<Integer, ArrayList<Integer>> epsilonClosure, ArrayList<Transition> transits, int start)`: Generates the transitions for the equivalent DFA based on the epsilon closures and transitions of the NFA. It constructs the DFA transitions using the epsilon closures and transitions of the NFA, starting from the specified start state.
+  - `sortArray(ArrayList<ArrayList<Integer>> array)`: Sorts an ArrayList of ArrayLists of integers lexicographically.
+  - `sortDFA()`: Sorts the DFA transitions lexicographically based on the start state, transition symbol, and final state.
+  - `NfaToDfa(String input)`: Constructor method that initializes the NFA to DFA converter. It takes a formatted string representation of the NFA as input and performs the conversion.
+  - `toString()`: Overrides the toString() method to generate a formatted string representation of the DFA. The string representation follows the format specified in the task description and includes states, transitions, starting states, and accept states.
  
 - **Example:**
 ```java
