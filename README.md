@@ -1,5 +1,5 @@
-# compilers-lab
-Weekly compilers lab assignments, coded in java.
+# Advanced Computer Lab - Compilers 💻👾
+Weekly compilers lab individual assignments, coded in java.
 
 ## RegExToNfa.java
 This class implements a converter from a regular expression to a non-deterministic finite automaton (NFA) using Thompson's construction algorithm.
@@ -171,4 +171,62 @@ public static void main(String[] args) {
         System.out.println(in.follow());
 
     }
+```
+
+## CfgLl1Parser
+This program implements a LL(1) parser for context-free grammars (CFG). Given a formatted string representation of the CFG, the program constructs a parsing table and then parses input strings according to the LL(1) parsing algorithm.
+
+### Class Structure
+
+- **Instance Variables:**
+  - `originalVariables`: Stores the original variables of the CFG.
+  - `originalTerminals`: Stores the original terminals of the CFG.
+  - `helper`: Hashtable storing the grammar rules associated with each variable.
+  - `parsingTable`: HashSet storing the parsing table entries.
+
+- **Constructor:**
+  - `CfgLl1Parser(String input)`: Constructs an LL(1) parser object with the provided string representation of the CFG. The constructor parses the input string and initializes the instance variables.
+
+- **Methods:**
+  - `getRule(String var, String terminal)`: Retrieves the parsing table rule given the variable and terminal.
+  - `parse(String input)`: Parses the input string according to the LL(1) parsing algorithm and returns the left-most derivation.
+
+### Nested Class `Grammar`
+Represents a grammar rule.
+
+- **Instance Variables:**
+  - `rule`: The production rule.
+  - `associatedFirst`: The associated First set.
+  - `associatedFollow`: The associated Follow set.
+
+- **Constructor:**
+  - `Grammar(String rule, String associatedFirst, String associatedFollow)`: Constructs a Grammar object with the provided rule, associated First set, and associated Follow set.
+
+### Nested Class `parsingTableEntry`
+Represents an entry in the LL(1) parsing table.
+
+- **Instance Variables:**
+  - `variable`: The variable associated with the entry.
+  - `terminal`: The terminal associated with the entry.
+  - `rule`: The production rule associated with the entry.
+
+- **Constructor:**
+  - `parsingTableEntry(String variable, String terminal, String rule)`: Constructs a parsingTableEntry object with the provided variable, terminal, and rule.
+
+## Example Usage
+
+```java
+public static void main(String[] args) {
+    // Example input representing a context-free grammar
+    String input = "S;T;L#a;b;c;d;i#S/ScTi,La,Ti,b;T/aSb,LabS,i;L/SdL,Si";
+
+    // Create an instance of CfgLl1Parser
+    CfgLl1Parser parser = new CfgLl1Parser(input);
+
+    // Parse an input string
+    String result = parser.parse("aib");
+
+    // Print the left-most derivation
+    System.out.println("Left-most derivation: " + result);
+}
 ```
